@@ -23,7 +23,8 @@
   "@context":"https://schema.org",
   "@type":"Person",
   "name":"Aditya Bhattacharjee",
-  "jobTitle":"External Audit & Financial Analysis Professional",
+  "jobTitle":"Accountant",
+  "worksFor":{"@type":"Organization","name":"ZAD Food Industries Co. LLC"},
   "url":"https://jumana2907.github.io/Portfolio/",
   "email":"mailto:adityabhattacharjee2007@gmail.com",
   "telephone":"+971508814221",
@@ -503,6 +504,92 @@
   }
   .rec-toggle:hover{text-decoration:underline;}
 
+  /* ---------- Skills: in progress ---------- */
+  .skill-sub{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:24px 0 10px;
+  }
+  .skill-tag.building{
+    border-style:dashed;
+    border-color:var(--ink-soft);
+    color:var(--ink-soft);
+    background:transparent;
+  }
+
+  /* ---------- Volunteering ---------- */
+  .vol-summary{font-size:14px;color:var(--ink-soft);margin:0 0 4px;}
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+    gap:10px;
+    margin-top:16px;
+  }
+  .gallery button{
+    padding:0;
+    border:1px solid var(--line);
+    background:var(--paper-2);
+    cursor:zoom-in;
+    aspect-ratio:4/3;
+    overflow:hidden;
+    border-radius:2px;
+  }
+  .gallery img{
+    width:100%;height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .25s ease;
+  }
+  .gallery button:hover img,.gallery button:focus-visible img{transform:scale(1.04);}
+  dialog.lightbox{
+    border:none;
+    padding:0;
+    background:transparent;
+    max-width:min(94vw,1100px);
+    max-height:92vh;
+    overflow:visible;
+  }
+  dialog.lightbox::backdrop{background:rgba(22,35,62,.86);}
+  .lightbox figure{margin:0;}
+  .lightbox img{
+    display:block;
+    max-width:100%;
+    max-height:80vh;
+    margin:0 auto;
+    border:6px solid var(--card);
+    background:var(--card);
+  }
+  .lightbox figcaption{
+    color:#fff;
+    font-size:13px;
+    text-align:center;
+    margin-top:10px;
+    min-height:1.2em;
+  }
+  .lb-btn{
+    position:absolute;
+    background:var(--card);
+    color:var(--ink);
+    border:1px solid var(--ink);
+    width:38px;height:38px;
+    font-size:18px;
+    line-height:1;
+    cursor:pointer;
+    border-radius:2px;
+  }
+  .lb-btn:hover{background:var(--paper-2);}
+  .lb-close{top:-14px;right:-14px;}
+  .lb-prev{left:-14px;top:45%;}
+  .lb-next{right:-14px;top:45%;}
+  @media (max-width:640px){
+    .lb-close{top:-46px;right:0;}
+    .lb-prev{left:0;top:auto;bottom:-52px;}
+    .lb-next{right:0;top:auto;bottom:-52px;}
+  }
+
   /* ---------- Print ---------- */
   @media print{
     @page{margin:14mm;}
@@ -513,6 +600,8 @@
     .job,.rec-card,.cred-row,.hero-stat{box-shadow:none !important;transform:none !important;break-inside:avoid;}
     .rec-text.clamp{display:block;-webkit-line-clamp:unset;overflow:visible;}
     .cred-action{display:none;}
+    .gallery{grid-template-columns:repeat(4,1fr);}
+    dialog.lightbox{display:none !important;}
     a{color:inherit;text-decoration:none;}
     header.top{animation:none;}
   }
@@ -527,7 +616,7 @@
       <div class="eyebrow">Statement of Professional Record</div>
       <h1 class="name">Aditya<br>Bhattacharjee</h1>
       <p class="role-line">Audit · Accounting · Financial Analysis</p>
-      <p class="loc-line avail">DUBAI, UAE — AVAILABLE IMMEDIATELY</p>
+      <p class="loc-line">DUBAI, UAE — ZAD FOOD INDUSTRIES</p>
       <div class="header-actions">
         <a class="btn primary" href="CV%20-%20Aditya%20Bhattacharjee.pdf" target="_blank" rel="noopener" download>Download CV</a>
         <a class="btn" href="mailto:adityabhattacharjee2007@gmail.com">Email</a>
@@ -551,8 +640,8 @@
       <span class="num">01</span> Summary
     </h2>
     <p>2nd Top Affiliate in the UAE (ACCA, March 2026 session) and both UAE and Middle East Regional APM Prizewinner, building a career across external audit, accounting, and financial analysis in Dubai.</p>
-    <p>Most recently an External Audit Intern at Grant Thornton, working full-cycle engagements — substantive testing through to finalizing financial statements for client sign-off. Before that, accounts receivable and financial reporting work at Elite Reach and Sarsan Contracting, covering both the transactional and assurance sides of finance.</p>
-    <p>Currently preparing for the CFA Level 1 exam in November 2026, to build depth in investment analysis alongside the accounting background. Open to roles across external or internal audit, accounting, financial analysis, and investment-adjacent positions in the UAE. Available immediately.</p>
+    <p>Currently in an accounting role at ZAD Food Industries, maintaining the books, reconciling supplier balances and preparing financial statements. Before that, an External Audit Intern at Grant Thornton, working full-cycle engagements from substantive testing through to finalizing financial statements for client sign-off, and earlier accounts receivable and financial reporting work at Elite Reach and Sarsan Contracting.</p>
+    <p>Building depth in investment analysis through the CFA Level 1 exam in November 2026, and teaching myself financial modelling (DCF valuation) and coding (Python, SQL) to move toward financial analysis and FP&amp;A. Alongside work, I volunteer in the community.</p>
   </section>
 
   <section id="figures">
@@ -590,6 +679,11 @@
       <span class="ledger-value">JAN 2025</span>
     </div>
     <div class="ledger-row">
+      <span class="ledger-label">Accounting — ZAD Food Industries</span>
+      <span class="ledger-fill"></span>
+      <span class="ledger-value">NOV 2026 – PRESENT</span>
+    </div>
+    <div class="ledger-row">
       <span class="ledger-label">External Audit — Grant Thornton</span>
       <span class="ledger-fill"></span>
       <span class="ledger-value">JAN 2026 – JUN 2026</span>
@@ -601,6 +695,19 @@
       <svg viewBox="0 0 20 20" fill="none" stroke="#8A2432" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M4 3 h9 l3 3 v11 h-12 z"/><path d="M13 3 v3 h3"/></svg>
       <span class="num">03</span> Experience
     </h2>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Accountant</span>
+        <span class="job-dates">NOV 2026 — PRESENT</span>
+      </div>
+      <div class="job-org">ZAD Food Industries Co. LLC, UAE</div>
+      <ul>
+        <li>Maintain the company's books in the OneSuite ERP, posting recurring expenses month by month and keeping the ledgers current.</li>
+        <li>Reconcile accounts payable vendor balances against supplier statements, carrying year-end balances through to the new year's openings.</li>
+        <li>Build linked financial statements from the prior-year audited financials, so figures flow consistently across the statements.</li>
+      </ul>
+    </div>
 
     <div class="job">
       <div class="job-head">
@@ -651,12 +758,22 @@
       <span class="skill-tag priority">External Audit (ISA)</span>
       <span class="skill-tag priority">Microsoft Excel (Advanced)</span>
       <span class="skill-tag">IFRS &amp; IAS Application</span>
+      <span class="skill-tag">Financial Statement Preparation</span>
+      <span class="skill-tag">Bookkeeping &amp; ERP Posting (OneSuite)</span>
+      <span class="skill-tag">AP &amp; Vendor Reconciliations</span>
       <span class="skill-tag">Substantive Testing &amp; Analytical Review</span>
       <span class="skill-tag">Financial Reporting &amp; Analysis</span>
       <span class="skill-tag">Reconciliations &amp; Variance Analysis</span>
       <span class="skill-tag">Audit Working Papers</span>
       <span class="skill-tag">Stakeholder Communication</span>
       <span class="skill-tag">Time &amp; Task Management</span>
+    </div>
+    <div class="skill-sub">Currently building</div>
+    <div class="skill-list">
+      <span class="skill-tag building">CFA Level 1</span>
+      <span class="skill-tag building">DCF &amp; Financial Modelling</span>
+      <span class="skill-tag building">Python</span>
+      <span class="skill-tag building">SQL</span>
     </div>
   </section>
 
@@ -679,6 +796,24 @@
     </div>
     <p class="lang-line"><span>Languages</span>English, Hindi, Bengali</p>
   </section>
+
+  <section id="volunteering" hidden>
+    <h2 class="sec-title">
+      <svg viewBox="0 0 20 20" fill="none" stroke="#8A2432" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M10 17 C4 12.5 2.5 9.5 2.5 7 A3.7 3.7 0 0 1 10 5.6 A3.7 3.7 0 0 1 17.5 7 C17.5 9.5 16 12.5 10 17 Z"/></svg>
+      <span class="num">06</span> Volunteering
+    </h2>
+    <div id="vol-list"></div>
+  </section>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <figure>
+      <img id="lb-img" src="" alt="">
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button class="lb-btn lb-close" type="button" aria-label="Close photo">&times;</button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photo">&#8592;</button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next photo">&#8594;</button>
+  </dialog>
 
   <section id="credentials">
     <h2 class="sec-title">
@@ -791,6 +926,67 @@
 
 </div>
 <script>
+/* Volunteering entries. Photos live in images/volunteer/. */
+var volunteering=[];
+
+(function(){
+  var list=document.getElementById('vol-list'),sec=document.getElementById('volunteering');
+  var dlg=document.getElementById('lightbox'),img=document.getElementById('lb-img'),cap=document.getElementById('lb-cap');
+  var current=[],idx=0;
+  function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text)e.textContent=text;return e;}
+  function show(i){
+    idx=(i+current.length)%current.length;
+    img.src=current[idx].src;img.alt=current[idx].alt||'';cap.textContent=current[idx].caption||'';
+    var multi=current.length>1;
+    dlg.querySelector('.lb-prev').hidden=!multi;dlg.querySelector('.lb-next').hidden=!multi;
+  }
+  function open(photos,i){
+    current=photos;show(i);
+    if(typeof dlg.showModal==='function')dlg.showModal();else dlg.setAttribute('open','');
+  }
+  dlg.querySelector('.lb-close').addEventListener('click',function(){dlg.close();});
+  dlg.querySelector('.lb-prev').addEventListener('click',function(){show(idx-1);});
+  dlg.querySelector('.lb-next').addEventListener('click',function(){show(idx+1);});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close();});
+  dlg.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft')show(idx-1);
+    if(e.key==='ArrowRight')show(idx+1);
+  });
+
+  if(!volunteering.length)return;
+  volunteering.forEach(function(v){
+    var card=el('div','job');
+    var head=el('div','job-head');
+    head.appendChild(el('span','job-title',v.role));
+    head.appendChild(el('span','job-dates',v.dates));
+    card.appendChild(head);
+    card.appendChild(el('div','job-org',v.org));
+    if(v.summary)card.appendChild(el('p','vol-summary',v.summary));
+    if(v.points&&v.points.length){
+      var ul=el('ul');
+      v.points.forEach(function(p){ul.appendChild(el('li','',p));});
+      card.appendChild(ul);
+    }
+    if(v.photos&&v.photos.length){
+      var g=el('div','gallery');
+      v.photos.forEach(function(p,i){
+        var b=el('button');b.type='button';b.setAttribute('aria-label','View photo: '+(p.alt||v.org));
+        var im=el('img');im.src=p.src;im.alt=p.alt||'';im.loading='lazy';
+        b.appendChild(im);
+        b.addEventListener('click',function(){open(v.photos,i);});
+        g.appendChild(b);
+      });
+      card.appendChild(g);
+    }
+    list.appendChild(card);
+  });
+  sec.hidden=false;
+  var n=0;
+  document.querySelectorAll('section:not([hidden]) .sec-title .num').forEach(function(s){
+    n++;s.textContent=(n<10?'0':'')+n;
+  });
+})();
+
 document.querySelectorAll('.rec-card').forEach(function(card){
   var text=card.querySelector('.rec-text'),btn=card.querySelector('.rec-toggle');
   if(!text||!btn)return;
